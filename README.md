@@ -30,8 +30,20 @@ cd email2ssh
 ```
 wget -qO- https://raw.githubusercontent.com/skiy/golang-install/master/install.sh | sh
 go env -w GO111MODULE=on
-go mod init sendmail
+go mod init email2ssh
 ```
+#####错误
+脚本安装go出现错误：
+```
+sh: 147: test: go1.18.3: unexpected operator
+sh: 233: [: 0: unexpected operator
+sh: 147: test: go1.18.3: unexpected operator
+```
+解决办法：
+```
+sudo dpkg-reconfigure dash
+```
+选择`否`，继续执行即可。
 ####下载go发送邮件的库
 ```
 go get gopkg.in/gomail.v2
@@ -49,11 +61,11 @@ cp sendmail.json /sendmail/bin/sendmail.json
 cp sendmail.sh /bin/sendmail.sh
 chmod 755 /bin/sendmail.sh
 ```
-###测试发信
+###5.测试发信
 ```
 /bin/sendmail.sh
 ```
-###修改登录ssh发信
+###6.修改登录ssh发信
 ```
 vi /etc/passwd
 ```
@@ -65,4 +77,15 @@ root:x:0:0:root:/root:/bin/bash
 ```
 root:x:0:0:root:/root:/bin/sendmail.sh
 ```
-###重新登录ssh即可使用
+###7.重新登录ssh即可使用
+
+
+由衷感谢：
+[使用邮箱验证登录后台ssh][1]
+[Go语言一键安装][2]
+[解决go: go.mod file not found][3]
+
+
+  [1]: https://www.cnblogs.com/janbar/p/13977377.html
+  [2]: https://github.com/jetsung/golang-install
+  [3]: https://blog.csdn.net/longgeaisisi/article/details/121288696
