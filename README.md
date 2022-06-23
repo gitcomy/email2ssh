@@ -44,6 +44,7 @@ sh: 147: test: go1.18.3: unexpected operator
 sudo dpkg-reconfigure dash
 ```
 选择`否`，继续执行即可。
+
 ####下载go发送邮件的库
 ```
 go get gopkg.in/gomail.v2
