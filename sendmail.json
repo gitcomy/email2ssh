@@ -1,9 +1,9 @@
 {
   "host": "smtp.163.com",
   "port": 25,
-  "user": "aku@163.com",
-  "pass": "FFSSQMTTMHWUNRVS",
-  "from": "ikoula<aku@163.com>",
-  "to": ["i@da.fo"],
-  "subject": "login ssh code"
+  "user": "***@163.com",
+  "pass": "***",
+  "from": "主机名<***@163.com>",
+  "to": ["***@qq.com"],
+  "subject": "【主机名】SSH登录验证码："
 }
