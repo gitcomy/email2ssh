@@ -1,0 +1,9 @@
+{
+  "host": "smtp.163.com",
+  "port": 25,
+  "user": "aku@163.com",
+  "pass": "FFSSQMTTMHWUNRVS",
+  "from": "ikoula<aku@163.com>",
+  "to": ["i@da.fo"],
+  "subject": "login ssh code"
+}
