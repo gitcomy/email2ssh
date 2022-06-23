@@ -5,5 +5,5 @@
   "pass": "***",
   "from": "主机名<***@163.com>",
   "to": ["***@qq.com"],
-  "subject": "【主机名】SSH登录验证码："
+  "subject": "【主机名】SSH登录验证码"
 }
