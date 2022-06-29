@@ -17,7 +17,7 @@ cd email2ssh
 建议163邮箱SMTP发信:
 ```
   "host": "smtp.163.com", //SMTP地址
-  "port": 25, //端口号
+  "port": 25, //端口号 TLS发送时写587
   "user": "***@163.com",//用户名为发信邮箱地址
   "pass": "***",//授权码，邮箱管理获取
   "from": "name <***@163.com>", //发件人填主机名方便查看，发信邮箱地址
@@ -52,6 +52,10 @@ go get gopkg.in/gomail.v2
 ####编译发送邮件的可执行程序
 ```
 go build -o /sendmail/bin/sendmail sendmail.go
+```
+如果使用TLS发送邮件
+```
+go build -o /sendmail/bin/sendmail sendmail-tls.go
 ```
 ####复制配置文件
 ```
